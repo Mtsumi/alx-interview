@@ -6,6 +6,9 @@ A function that returns a list of lists of integers
 
 
 def pascal_triangle(n):
+    """
+    Returns a list of lists of integers representing the Pascal’s triangle of n
+    """
     t = [[] for i in range(n)]
 # checking the type and whether n is zero
     if type(n) is not int and n <= 0:

@@ -2,7 +2,7 @@ def pascal_triangle(n):
     triangle = [[] for i in range (n)]
     #checking the type and whether n is zero
     if type(n) is not int and n <= 0:
-        return triangle
+        return []
     #looping through the rows
     for i in range (n):
         for j in range (i+1):

@@ -1,3 +1,10 @@
+#!/usr/bin/python3
+
+"""
+A function that returns a list of lists of integers
+"""
+
+
 def pascal_triangle(n):
     t = [[] for i in range(n)]
 # checking the type and whether n is zero

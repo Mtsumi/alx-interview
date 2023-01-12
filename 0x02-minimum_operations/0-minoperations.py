@@ -1,5 +1,6 @@
 def minOperations(n):
-    # Initialize an array to store the minimum number of operations needed to generate i copies of 'H'
+    # Initialize an array to store
+    # minimum number of operations needed to generate i copies of 'H'
     dp = [0] * (n + 1)
     # Initialize the base case for 0 copies of 'H'
     dp[0] = 0

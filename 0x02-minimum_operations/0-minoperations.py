@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+'''Calculating minimum ops using dynamic programming
+    '''
 def minOperations(n):
     # Initialize an array to store
     # minimum number of operations needed to generate i copies of 'H'

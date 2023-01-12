@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 '''The minimum ops coding challenge
     '''
+
+
 def minOperations(n):
     # checking if n is a number
     if not isinstance(n, int):

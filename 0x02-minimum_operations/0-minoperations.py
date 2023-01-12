@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def minOperations(n):
     # Initialize an array to store
     # minimum number of operations needed to generate i copies of 'H'

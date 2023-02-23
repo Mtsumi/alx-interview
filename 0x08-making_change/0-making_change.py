@@ -1,29 +1,25 @@
 #!/usr/bin/python3
+"""Change making module.
 """
-"""
-# from typing import List
 
 
 def makeChange(coins, total):
-    """Module to find the minimum number of coins
-    needed to meet a given amount
-    Solution uses dynamic programming
+    """Determines the fewest number of coins needed to meet a given
+    amount total when given a pile of coins of different values.
     """
-    if total < 1:
+    if total <= 0:
         return 0
-
-    # creating a 2D array for memoization
-    memo = [[0] * (total + 1) for _ in range(len(coins))]
-
-    # looping over the memo 2D array to fill it with values
-
-    for i in range(len(coins)):
-        for j in range(1, total + 1):
-            if i == 0:
-                memo[i][j] = j // coins[i]
-            elif j < coins[i]:
-                memo[i][j] = memo[i - 1][j]
-            else:
-                memo[i][j] = min(memo[i - 1][j], 1 + memo[i][j - coins[i]])
-
-    return memo[-1][-1] if memo[-1][-1] != float('inf') else -1
+    rem = total
+    coins_count = 0
+    coin_idx = 0
+    sorted_coins = sorted(coins, reverse=True)
+    n = len(coins)
+    while rem > 0:
+        if coin_idx >= n:
+            return -1
+        if rem - sorted_coins[coin_idx] >= 0:
+            rem -= sorted_coins[coin_idx]
+            coins_count += 1
+        else:
+            coin_idx += 1
+    return coins_count
